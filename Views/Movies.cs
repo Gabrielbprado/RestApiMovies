@@ -4,6 +4,8 @@ namespace FilmesApi.Views
 {
     public class Movies
     {
+        [Key]
+        [Required]
         public int Id { get; set; } = 0;
         [Required (ErrorMessage = "The Title is Required")]
         public string? Title { get; set; }
