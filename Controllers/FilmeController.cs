@@ -21,7 +21,7 @@ public class MovieController : Controller
     }
 
     [HttpPost]
-        public IActionResult AddMovie([FromBody] CreatedMoviedtos Moviedto)
+        public IActionResult PostMovie([FromBody] CreatedMoviedtos Moviedto)
     {
         Movies Movie = _mapper.Map<Movies>(Moviedto);
         _dbContext.Movies.Add(Movie);
@@ -34,14 +34,18 @@ public class MovieController : Controller
     }
 
     [HttpGet]
-    public IEnumerable<Movies> GetFilmes([FromQuery] int skip = 0, [FromQuery] int take = 50) => _dbContext.Movies.Skip(skip).Take(take);
+    public IEnumerable<ReadMovie> GetFilmes([FromQuery] int skip = 0, [FromQuery] int take = 50)
+    {
+      return _mapper.Map<List<ReadMovie>>(_dbContext.Movies.Skip(skip).Take(take));
+    }
 
     [HttpGet("{id}")]
     public IActionResult GetMovieId(int id)
     {
-        var filme = _dbContext.Movies.FirstOrDefault(filme => filme.Id == id);
-        if (filme == null) return NotFound();
-        return Ok(filme);
+        var movie = _dbContext.Movies.FirstOrDefault(movie => movie.Id == id);
+        if (movie == null) return NotFound();
+        var filmeDto = _mapper.Map<ReadMovie>(movie);
+        return Ok(filmeDto);
     }
 
     [HttpPut("{id}")]
@@ -71,6 +75,19 @@ public class MovieController : Controller
         return NoContent();
 
 
+    }
+    [HttpDelete("{id}")]
+        public IActionResult DeleteMovie(int id)
+    {
+        var movie = _dbContext.Movies.FirstOrDefault(movie => movie.Id == id);
+        if (movie == null) return NotFound();
+            _dbContext.Remove(movie);
+        _dbContext.SaveChanges();
+          return NoContent();
+
+        {
+            
+        }
     }
 
 }
