@@ -6,14 +6,14 @@ Create a Web Api to Manage Movies Using the Rest Pattern
 
 | :placard: Vitrine.Dev |     |
 | -------------  | --- |
-| :sparkles: Nome        | **Titulo do meu projeto**
+| :sparkles: Nome        | **WEB API MOVIES**
 | :label: Tecnologias | C#, MySQL
 | :rocket: URL         | https://github.com/Gabrielbprado/RestApiMovies.git
-| :fire: Desafio     | https://url-do-desafio.com.br
+
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
-![](https://via.placeholder.com/1200x500.png?text=imagem+lindona+do+meu+projeto#vitrinedev)
+![](https://github.com/Gabrielbprado/RestApiMovies/blob/master/Header.svg#vitrinedev)
 
 ## Detalhes do projeto
 
-Textos e imagens que descrevam seu projeto, suas conquistas, seus desafios, próximos passos, etc...
+My First Web APi and My Starting Point for ASPNET mvc Development
