@@ -8,7 +8,7 @@ Create a Web Api to Manage Movies Using the Rest Pattern
 | -------------  | --- |
 | :sparkles: Nome        | **Titulo do meu projeto**
 | :label: Tecnologias | C#, MySQL
-| :rocket: URL         | https://url-deploy.com.br
+| :rocket: URL         | https://github.com/Gabrielbprado/RestApiMovies.git
 | :fire: Desafio     | https://url-do-desafio.com.br
 
 <!-- Inserir imagem com a #vitrinedev ao final do link -->
