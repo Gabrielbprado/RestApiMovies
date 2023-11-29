@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FilmesApi</name>
+    </assembly>
+    <members>
+        <member name="M:FilmesApi.Controllers.MovieController.#ctor(FilmesApi.Data.MovieContext,AutoMapper.IMapper)">
+            <summary>
+            Constructor that initiates the attributes
+            </summary>
+            <param name="dbContext">Required Objects to create a Builder</param>
+            /// <param name="mapper">Required Objects to create a Builder</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:FilmesApi.Controllers.MovieController.PostMovie(FilmesApi.Dtos.CreatedMoviedtos)">
+            <summary>
+            Adds a movie to the database
+            </summary>
+            <param name="Moviedto">Object with the fields required to create a movie</param>
+            <returns>IActionResult</returns>
+        </member>
+        <member name="M:FilmesApi.Controllers.MovieController.GetFilmes(System.Int32,System.Int32)">
+            <summary>
+            Grabs All Movies from the Database
+            </summary>
+            <param name="skip">Object with the optional fields to get a movie</param>
+            <param name="take">Object with the optional fields to get a movie</param>
+            <returns>IEnumerable</returns>
+            <response code="200">If insertion is done successfully</response>
+        </member>
+        <member name="M:FilmesApi.Controllers.MovieController.GetMovieId(System.Int32)">
+            <summary>
+            Picks up the movies with the id specified in the database
+            </summary>
+            <param name="id">Object with the required fields to get a movie</param>
+            <returns>IActionResult</returns>
+            <response code="200">If insertion is done successfully</response>
+        </member>
+        <member name="M:FilmesApi.Controllers.MovieController.PUTMovie(System.Int32,FilmesApi.Dtos.UpdateMoviedto)">
+            <summary>
+            Change a Movie with Specified Id
+            </summary>
+            <param name="id">Object with the required fields to update a Movie</param>
+            /// <param name="moviedto">Object with the required fields to update a Movie</param>
+            <returns>IActionResult</returns>
+            <response code="204">If insertion is done successfully</response>
+        </member>
+        <member name="M:FilmesApi.Controllers.MovieController.PatchMovie(System.Int32,Microsoft.AspNetCore.JsonPatch.JsonPatchDocument{FilmesApi.Dtos.UpdateMoviedto})">
+            <summary>
+            Change only one element of the movie with a specified ID
+            </summary>
+            <param name="id">Object with the required fields to update a Movie</param>
+            /// <param name="patch">Object with the required fields to update a Movie</param>
+            <returns>IActionResult</returns>
+            <response code="204">If insertion is done successfully</response>
+        </member>
+        <member name="M:FilmesApi.Controllers.MovieController.DeleteMovie(System.Int32)">
+            <summary>
+            Deletes a Movie
+            </summary>
+            <param name="id">Object with the required fields to delete a Movie</param>
+            <returns>IActionResult</returns>
+            <response code="204">If insertion is done successfully</response>
+        </member>
+        <member name="T:FilmesApi.Migrations.CreatedTableMovie">
+            <inheritdoc />
+        </member>
+        <member name="M:FilmesApi.Migrations.CreatedTableMovie.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FilmesApi.Migrations.CreatedTableMovie.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:FilmesApi.Migrations.CreatedTableMovie.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
